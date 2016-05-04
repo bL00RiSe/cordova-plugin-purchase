@@ -66,9 +66,8 @@ SOFTWARE.
     </platform>
 
     <!-- android -->
+  <preference name="BILLING_KEY" /> <!-- seems like Visual Studio can't recognize variable inside platform, so I pulled it out-->
     <platform name="android">
-        <preference name="BILLING_KEY" />
-
         <js-module src="www/store-android.js" name="InAppBillingPlugin">
             <clobbers target="store" />
         </js-module>
