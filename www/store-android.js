@@ -881,10 +881,12 @@ store.sandbox = false;
         ITEM_NOT_OWNED: 8
     };
     function init() {
+    	console.log("seems like it works");
         if (initialized) return;
         initialized = true;
         for (var i = 0; i < store.products.length; ++i) skus.push(store.products[i].id);
         store.inappbilling.init(iabReady, function(err) {
+        	console.log("IABHelper error: " + err);
             initialized = false;
             store.error({
                 code: store.ERR_SETUP,
